@@ -1,0 +1,63 @@
+.card {
+    position: relative;
+    margin-inline: 2rem;
+    margin-block: 3rem;
+    font-size: 0.7rem;
+    transition: all 0.2s;
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    background: var(--azul50);
+    border-radius: 8px;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+    top: -15px;
+    left: -15px;
+}
+
+.circle:nth-child(2) {
+    bottom: -15px;
+    right: -15px;
+    animation-name: move-down1;
+}
+
+.cardInner {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 3rem;
+    margin-inline: .2rem;
+    height: 18rem;
+}
+
+.acessarFolders {
+    margin-top: .5rem;
+    align-self: center;
+    justify-self: center;
+    background: var(--azul100);
+    padding: 2px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acessarFolders:hover {
+    background-color: var(--azul100);
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-size: 1rem;
+}

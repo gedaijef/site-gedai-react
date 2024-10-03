@@ -2,7 +2,16 @@ import logoJF from "../../assets/logoJ&F.webp";
 import styles from "./Header.module.css";
 import {useState, useEffect} from "react";
 
-const Header = ({topicos}) => {
+const Header = () => {
+
+  const topicosNavBar = [
+    { id: "home", assunto: "O que é" },
+    { id: "quemSomos", assunto: "Quem somos" },
+    { id: "projetos", assunto: "Projetos" },
+    { id: "noticias", assunto: "Notícias" }
+  ];
+
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,9 +42,9 @@ const Header = ({topicos}) => {
         </h1>
       </div>
       <ul className={styles.topicos}>
-        {topicos.map((topico) => (
-          <li key={topico} className={styles.topico}>
-            <a href={`#${topico}`} className={styles.linkTopico}>{topico}</a>
+        {topicosNavBar.map((topico) => (
+          <li className={styles.topico}>
+            <a href={`#${topico.id}`} className={styles.linkTopico}>{topico.assunto}</a>
           </li>
         ))}
       </ul>
