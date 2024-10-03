@@ -19,7 +19,8 @@
 .explicacaoTitulo,
 .tituloProjetos,
 .explicacaoTexto,
-.skillsTitulo {
+.skillsTitulo,
+.tituloNoticias {
   text-align: center;
 }
 
@@ -80,4 +81,38 @@
 
 .projetos {
   overflow: hidden;
+}
+
+.noticias {
+  margin-bottom: 3rem;
+}
+
+.containerNoticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer {
+  margin-top: 1rem;
+  background-color: #383838;
+  display: flex;
+  color: white;
+  padding-block: 1rem;
+  align-items: center;
+}
+
+.logo {
+  border-right: 2px solid white;
+  padding-right: 1rem;
+}
+
+.linkLogo {
+  color: white;
+  text-decoration: none;
+}
+
+.info,
+.logo {
+  margin-left: 1rem;
 }

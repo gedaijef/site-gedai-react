@@ -16,6 +16,11 @@ import {
 } from '@mui/icons-material';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Noticia from './Components/Noticia/Noticia';
+import FotoGedaiMetropoles from './assets/FotoGedaiMetropoles.webp';
+import FotoTechNeoFeed from './assets/FotoTechNeoFeed.webp';
+import FotoEstagioGerminaretechGazeta from './assets/FotoEstagioGerminaretechGazeta.webp';
+import FotoTecnologiaNegociosGazeta from './assets/FotoTecnologiaNegociosGazeta.webp';
 
 
 
@@ -35,9 +40,16 @@ function App() {
     { id: 3, nome: "Visão Computacional", icone: <MonitorIcon /> }
   ]
 
+  const noticias = [
+    { id: 1, imagem: FotoGedaiMetropoles, linkMateria: "https://www.metropoles.com/brasil/educacao-profissionalcomo-a-inteligencia-artificial-pode-ajudar-a-educacao-profissional", linkSiteMateria: "https://www.metropoles.com", nomeMateria: "Metrópoles", tituloMateria: "Como a Inteligência Artificial pode ajudar a Educação Profissional", subtituloMateria: "O GEDAI é um grupo de estudos com missão de explorar a Inteligência Artificial" },
+    { id: 2, imagem: FotoTechNeoFeed, linkMateria: "https://neofeed.com.br/negocios/na-jf-a-licao-de-casa-para-lidar-com-o-apagao-de-tecnologia/", linkSiteMateria: "https://neofeed.com.br", nomeMateria: "NeoFeed", tituloMateria: "Na J&F, a lição de casa para lidar com o apagão de tecnologia", subtituloMateria: "A escola de tecnologia Germinare TECH é a aposta da J&F para suprir a demanda por profissionais de TI, ao combinar aulas com estágios nas empresas do grupo." },
+    { id: 3, imagem: FotoEstagioGerminaretechGazeta, linkMateria: "https://www.instagram.com/reel/C85RwjLvCaq/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", linkSiteMateria: "https://www.instagram.com/institutojef?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", nomeMateria: "Instituto J&F", tituloMateria: "Vídeo sobre IA, trilha sonora feita em IA!", subtituloMateria: "Temos muitas IAs à nossa disposição. Mas, como as empresas as utilizam hoje em dia?" },
+    { id: 4, imagem: FotoTecnologiaNegociosGazeta, linkMateria: "https://www.instagram.com/reel/C2ADb8HtZAV/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", linkSiteMateria: "https://www.instagram.com/institutojef?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", nomeMateria: "Instituto J&F", tituloMateria: "Estágios que visam ampliar os conhecimentos dos alunos da Germinare TECH.", subtituloMateria: "Os estudantes trabalham nas empresas do grupo J&F e convivem com problemas e desafios reais dentro da área de análise de dados e desenvolvimento de sistemas." },
+  ]
+
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <main className={styles.main}>
         <Banner foto={fotoGedai} titulo="GEDAI" subtitulo="Grupo de Estudos e Desenvolvimento em Artificial Intelligence" />
         <section className={styles.home} id="home">
@@ -81,7 +93,29 @@ function App() {
           <Titulo titulo="Conheça alguns projetos" cor="var(--azul100)" className={styles.tituloProjetos} />
           <Carrossel />
         </section>
+        <section className={styles.noticias}>
+          <Titulo titulo="Notícias" cor="var(--azul100)" className={styles.tituloNoticias} />
+          <div className={styles.containerNoticias}>
+            {noticias.map((noticia) => (
+              <Noticia
+                imagem={noticia.imagem}
+                linkMateria={noticia.linkMateria}
+                linkSiteMateria={noticia.linkSiteMateria}
+                nomeMateria={noticia.nomeMateria}
+                tituloMateria={noticia.tituloMateria}
+                subtituloMateria={noticia.subtituloMateria}
+              />
+            ))}
+          </div>
+        </section>
       </main>
+      <footer className={styles.footer}>
+        <h3 className={styles.logo}><a href="index.html" className={styles.linkLogo}>GEDAI</a></h3>
+        <div>
+          <p className={styles.info}>Email: gedai@gmail.com</p>
+          <p className={styles.info}>Localizados no quarto andar do Instituto J&F</p>
+        </div>
+      </footer>
     </div>
   );
 }
