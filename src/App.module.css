@@ -1,0 +1,79 @@
+.main {
+  line-height: 150%;
+}
+
+.home {
+  display: flex;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.explicacaoLink {
+  text-decoration: underline;
+  color: black;
+}
+
+.explicacao {
+  width: 50%;
+}
+
+.explicacaoTitulo,
+.tituloProjetos,
+.explicacaoTexto,
+.skillsTitulo {
+  text-align: center;
+}
+
+.skills {
+  width: 50%;
+  user-select: none;
+}
+
+.listaSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsPT1,
+.skillsPT2 {
+  flex-direction: row;
+  display: flex;
+  gap: .5rem;
+  text-align: center;
+  margin-block: .2rem;
+}
+
+.skillsPT1 {
+  animation: move-up6 2s ease-in-out infinite alternate-reverse;
+}
+
+.skillsPT2 {
+  animation: move-down1 2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateX(10px);
+  }
+}
+
+.quemSomos {
+  background: var(--azul100) url(./assets/espaco.webp) center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.tituloQuemSomos {
+  padding-top: 2rem;
+}
+
+.quemSomosTexto {
+  width: 50%;
+}

@@ -1,0 +1,19 @@
+.skill {
+    list-style-type: none;
+    background-color: var(--azul50);
+    color: white;
+    height: 5.6rem;
+    width: 5.6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 8px;
+    font-size: .7rem;
+    line-height: normal;
+}
+
+.icon {
+    margin-top: .2rem;
+    font-size: 2rem;
+}
